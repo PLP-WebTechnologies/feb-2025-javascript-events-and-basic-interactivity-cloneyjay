@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Registration Form</h1>
+        <div class="theme-toggle">
+            <button id="themeToggle">Toggle Dark Mode</button>
+        </div>
+
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <span class="validation-message" id="usernameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="validation-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="validation-message" id="passwordError"></span>
+                <div class="password-strength">
+                    <div class="strength-meter" id="strengthMeter"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Interests</label>
+                <div class="interests-container">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="interests" value="coding"> Coding
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="interests" value="design"> Design
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="interests" value="gaming"> Gaming
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn">Register</button>
+        </form>
+
+        <div class="interactive-elements">
+            <div class="color-picker">
+                <h3>Customize Accent Color</h3>
+                <input type="color" id="accentColor" value="#4CAF50">
+            </div>
+            
+            <div class="animation-demo">
+                <h3>Interactive Animation</h3>
+                <div class="animated-box" id="animatedBox"></div>
+                <button id="animateBtn">Animate!</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
